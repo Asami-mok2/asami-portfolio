@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>制作物詳細 | 宮川 麻実 ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-work="designhub">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark">&lt;/&gt;</span>
+          <span>宮川 麻実</span>
+        </a>
+        <nav>
+          <ul class="nav__links">
+            <li><a href="../index.html#about">自己紹介</a></li>
+            <li><a href="../index.html#skills">スキル</a></li>
+            <li><a href="../index.html#works">制作物</a></li>
+            <li><a href="../index.html#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div class="container">
+          <a class="back-link" href="../index.html#works">← 制作物一覧へ戻る</a>
+          <p class="eyebrow">Work Detail</p>
+          <h1 class="detail-title" id="detailTitle"></h1>
+          <div class="tags detail-tags" id="detailTags"></div>
+          <div class="detail-media reveal">
+            <img id="detailImage" src="" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="container detail-body">
+          <section class="detail-block reveal">
+            <h2>概要</h2>
+            <p id="overview"></p>
+          </section>
+          <section class="detail-block reveal">
+            <h2>制作目的</h2>
+            <p id="purpose"></p>
+          </section>
+          <section class="detail-block reveal">
+            <h2>主な機能</h2>
+            <ul id="functions"></ul>
+          </section>
+          <section class="detail-block reveal">
+            <h2>工夫した点</h2>
+            <p id="point"></p>
+          </section>
+          <section class="detail-block reveal">
+            <h2>学んだこと</h2>
+            <p id="learned"></p>
+          </section>
+          <div class="detail-links reveal">
+            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">GitHub：準備中</a>
+            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">公開URL：準備中</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="mono">© 2026 宮川 麻実 — built with HTML / CSS / JS</p>
+      </div>
+    </footer>
+
+    <script src="../js/detail.js"></script>
+  </body>
+</html>
