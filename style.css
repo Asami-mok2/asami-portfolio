@@ -322,7 +322,7 @@ a {
   width: 520px;
   max-width: none;
   justify-self: start;
-  margin-left: 150px;   /* ←追加 */
+  margin-left: 70px;   /* ←追加 */
   border: 1px solid var(--line);
   border-radius: 14px;
   background-color: rgba(255, 255, 255, 0.55);
