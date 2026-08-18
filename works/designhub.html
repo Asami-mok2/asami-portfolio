@@ -13,28 +13,27 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body data-work="designhub">
+    <div class="cursor" aria-hidden="true"></div>
+
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="../index.html">
-          <span class="brand__mark">&lt;/&gt;</span>
-          <span>宮川 麻実</span>
-        </a>
-        <nav>
-          <ul class="nav__links">
-            <li><a href="../index.html#about">自己紹介</a></li>
-            <li><a href="../index.html#skills">スキル</a></li>
-            <li><a href="../index.html#works">制作物</a></li>
-            <li><a href="../index.html#contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
-      </div>
+      <a class="brand" href="../index.html#top">
+        Miyakawa Asami<span class="brand__reg">·</span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#connect">Connect</a>
+      </nav>
+      <a class="header-cta" href="../index.html#connect">
+        Let&apos;s talk <span aria-hidden="true">↗</span>
+      </a>
     </header>
 
     <main>
       <section class="detail-hero">
         <div class="container">
-          <a class="back-link" href="../index.html#works">← 制作物一覧へ戻る</a>
-          <p class="eyebrow">Work Detail</p>
+          <a class="back-link" href="../index.html#work">← 制作物一覧へ戻る</a>
+          <span class="eyebrow">Work Detail</span>
           <h1 class="detail-title" id="detailTitle"></h1>
           <div class="tags detail-tags" id="detailTags"></div>
           <div class="detail-media reveal">
@@ -74,11 +73,12 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p class="mono">© 2026 宮川 麻実 — built with HTML / CSS / JS</p>
-      </div>
+      <span>© 2026 宮川 麻実</span>
+      <span>Designed &amp; Coded in Japan</span>
+      <a href="../index.html#top">トップへ戻る <span aria-hidden="true">↑</span></a>
     </footer>
 
+    <script src="../js/app.js"></script>
     <script src="../js/detail.js"></script>
   </body>
 </html>
