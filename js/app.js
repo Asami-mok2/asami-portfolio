@@ -89,28 +89,12 @@
       tags: ["CAD", "3Dプリンター", "SO-101"],
     },
     {
-      title: "Anime Search App",
-      href: "works/anime.html",
-      img: "./public/images/anime-search.png",
-      alt: "Anime Search App のスクリーンショット",
-      desc: "観たいアニメをすばやく探せる iOS アプリ。API 連携で作品情報を取得し、迷わず目的にたどり着ける画面設計にしました。",
-      tags: ["SwiftUI", "API", "iOS"],
-    },
-    {
-      title: "Kanji Quiz App",
-      href: "works/kanji.html",
-      img: "./public/images/kanji-quiz.png",
-      alt: "Kanji Quiz App のスクリーンショット",
-      desc: "漢字を楽しく学べるクイズアプリ。出題から採点までの流れを整理し、続けたくなるテンポと分かりやすさを意識しました。",
-      tags: ["SwiftUI", "Quiz", "Study"],
-    },
-    {
       title: "DesignHub",
       href: "works/designhub.html",
-      img: "./public/images/designhub.png",
-      alt: "DesignHub のスクリーンショット",
-      desc: "デザインのアイデアをまとめる Web サイト。HTML / CSS / JS で一から実装し、見やすいレイアウトと操作しやすさを追求しました。",
-      tags: ["Web", "HTML / CSS", "JavaScript"],
+      img: "./public/images/designhub/designhub.svg",
+      alt: "DesignHub のイメージ",
+      desc: "Web上にあるフリー素材を検索・閲覧・管理できるスマートフォンアプリ。カテゴリやキーワードから素材を探し、利用条件をひと目で確認できるようにしました。",
+      tags: ["Figma", "Prototype", "UI/UX"],
     },
   ];
 

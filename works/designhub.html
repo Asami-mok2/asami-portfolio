@@ -36,13 +36,447 @@
           <span class="eyebrow">Work Detail</span>
           <h1 class="detail-title" id="detailTitle"></h1>
           <div class="tags detail-tags" id="detailTags"></div>
-          <div class="detail-media reveal">
-            <img id="detailImage" src="" alt="" />
-          </div>
         </div>
       </section>
 
-      <section class="section section--alt">
+      <section class="section slides-section">
+        <div class="container">
+          <div class="slidedeck reveal" aria-label="発表スライド">
+            <div class="slidedeck__viewport">
+              <div class="slidedeck__track">
+                <article class="slidedeck__slide" style="align-items: center; text-align: center;">
+                  <h2 class="slidedeck__title">DesignHub</h2>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">Introduction</p>
+                  <p class="slidedeck__lead" style="font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.6rem); text-align: center;">DesignHubについて</p>
+                  <p class="slidedeck__lead">
+                    本アプリは、学生が制作課題に取り組む際に感じている「素材探しにかかる時間」や「作業の非効率さ」を解消することを目的とした制作支援アプリです。
+                    画像やアイコンなどの制作素材を一括で検索できるほか、利用条件が明確で安全に使える素材のみを扱うことで、安心して制作に集中できる環境を提供します。
+                    また、素材の保存や再利用をしやすくすることで、探す時間を減らし、限られた制作時間の中でも作品の完成度を効率的に高めることを目指しています。
+                  </p>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ペルソナ 1</p>
+                  <div class="slidedeck__persona">
+                    <div class="slidedeck__photo slidedeck__persona-photo" style="aspect-ratio: 3 / 4;">写真：木村ひかるさん（差し替え予定）</div>
+                    <div class="slidedeck__persona-info">
+                      <p><strong>木村 ひかる</strong>（20歳・男性・Webデザイン系専攻）</p>
+                      <p class="slidedeck__meta-text">さいたまIT・WEB専門学校 1年／実家暮らし／飲食店バイト週3／ノートPC（Windows）・スマホ（Android）</p>
+                      <ul class="slidedeck__list">
+                        <li>授業はちゃんと聞くが、課題はできるだけ早く済ませたい</li>
+                        <li>素材探しはGoogle検索で済ませる</li>
+                        <li>グループ作業は苦手ではないが、素材共有や方向性決めが面倒</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ペルソナ 1 ― ニーズ／不満点</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>ニーズ</h3>
+                      <ul>
+                        <li>探すよりサッと出てくる素材が欲しい</li>
+                        <li>グループのメンバーと素材を統一したい</li>
+                        <li>ライセンス説明が面倒だから安心素材から自動で選びたい</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>不満点</h3>
+                      <ul>
+                        <li>ネット検索すると素材が多すぎて選べない</li>
+                        <li>「どこのサイトの画像？」と聞かれるのが面倒</li>
+                        <li>提出前に「形式これであってる？」と毎回不安</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ペルソナ 1 ― 潜在的欲求／解決策</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>潜在的欲求</h3>
+                      <ul>
+                        <li>時間が少なくても「それっぽい仕上がり」にしたい</li>
+                        <li>ちゃんと作ったと思われたい</li>
+                        <li>グループ制作をもっとスムーズにしたい</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>解決策</h3>
+                      <ul>
+                        <li>必要素材を1画面で検索→ダウンロード→共有可能</li>
+                        <li>「授業・課題用」の安全な素材を自動推薦</li>
+                        <li>テンプレ・提出形式・命名ルールまでまとめてサポート</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ペルソナ 2</p>
+                  <div class="slidedeck__persona">
+                    <div class="slidedeck__photo slidedeck__persona-photo" style="aspect-ratio: 3 / 4;">写真：天野ほのかさん（差し替え予定）</div>
+                    <div class="slidedeck__persona-info">
+                      <p><strong>天野 ほのか</strong>（19歳・女性・UI・Webデザイン志望）</p>
+                      <p class="slidedeck__meta-text">さいたまIT・WEB専門学校 2年／ひとり暮らし／雑貨店バイト週2／Figma・Canva・CodePen・Coolors</p>
+                      <ul class="slidedeck__list">
+                        <li>作品の雰囲気や統一感を大事にし、「見せ方」にこだわるタイプ</li>
+                        <li>素材やテンプレをよく使うが、他の人と被るのは避けたい</li>
+                        <li>アイデア段階で悩みやすく、企画に時間がかかる</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ペルソナ 2 ― ニーズ／不満点</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>ニーズ</h3>
+                      <ul>
+                        <li>テーマに合う素材をセットでまとめて探したい</li>
+                        <li>デザイン全体の雰囲気を統一したい</li>
+                        <li>企画段階で参考となるデザイン例を見たい</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>不満点</h3>
+                      <ul>
+                        <li>良い素材を探すと時間が溶ける</li>
+                        <li>サイトによってライセンス表記が違い、確認が面倒</li>
+                        <li>用途ごとに探し分けないといけない</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ペルソナ 2 ― 潜在的欲求／解決策</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>潜在的欲求</h3>
+                      <ul>
+                        <li>自分の作品が他と差別化できる仕上がりにしたい</li>
+                        <li>テーマに合わせてプロみたいな雰囲気を作りたい</li>
+                        <li>時間を短縮できれば、もっとデザインに時間を使いたい</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>解決策</h3>
+                      <ul>
+                        <li>テーマ入力→色・アイコン・背景・フォントがセットで推薦</li>
+                        <li>ライセンス情報付きで安心利用</li>
+                        <li>再利用・共有できるマイ素材ライブラリ付き</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ムードボード</p>
+                  <div class="slidedeck__grid" style="grid-template-columns: 1.6fr 1fr 1fr;">
+                    <div class="slidedeck__photo" style="aspect-ratio: 16 / 9;">写真：ムードボード（スマホ画面3枚・差し替え予定）</div>
+                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">図：ワークスペース構成イメージ（差し替え予定）</div>
+                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">写真：参考アプリのストア画面（差し替え予定）</div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ブランドパーソナリティ</p>
+                  <ul class="slidedeck__list" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 24px; row-gap: 6px;">
+                    <li class="is-accent">使いやすい</li>
+                    <li class="is-accent">信頼できる</li>
+                    <li class="is-accent">整っている</li>
+                    <li class="is-accent">シンプル</li>
+                    <li class="is-accent">効率的</li>
+                    <li class="is-accent">安心できる</li>
+                    <li>クリエイティブ</li>
+                    <li>わかりやすい</li>
+                    <li>直感的</li>
+                    <li>近づきやすい</li>
+                    <li>スマート</li>
+                    <li>モダン</li>
+                    <li>楽しい</li>
+                    <li>フレンドリー</li>
+                    <li>落ち着いた</li>
+                    <li>カジュアル</li>
+                  </ul>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">ブランドポジション</p>
+                  <p class="slidedeck__axis-top">複数機能をまとめて使える</p>
+                  <div class="slidedeck__axis-row">
+                    <span class="slidedeck__axis-label">プロ・一般向け、用途が広い</span>
+                    <div class="slidedeck__quadrant">
+                      <div class="slidedeck__quadrant-cell">
+                        <p class="slidedeck__quadrant-note">Canva・Adobe Express・Figma</p>
+                      </div>
+                      <div class="slidedeck__quadrant-cell slidedeck__quadrant-cell--highlight">DesignHub</div>
+                      <div class="slidedeck__quadrant-cell">
+                        <p class="slidedeck__quadrant-note">Google・Unsplash・Craft</p>
+                      </div>
+                      <div class="slidedeck__quadrant-cell">
+                        <p class="slidedeck__quadrant-note">学校配布テンプレ集<br />PowerPoint標準テンプレ<br />授業資料配布サイト</p>
+                      </div>
+                    </div>
+                    <span class="slidedeck__axis-label">学生・授業・制作課題に特化</span>
+                  </div>
+                  <p class="slidedeck__axis-bottom">1機能特化</p>
+                </article>
+
+                <article class="slidedeck__slide" style="align-items: center; text-align: center;">
+                  <p class="slidedeck__label">Logo mark</p>
+                  <div class="slidedeck__photo" style="aspect-ratio: 16 / 9; max-width: 420px;">ロゴ画像（差し替え予定）</div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">狩野の品質モデル ― 当たり前品質</p>
+                  <div class="slidedeck__box">
+                    <h3>当たり前品質</h3>
+                    <ul>
+                      <li>素材検索機能（画像・アイコン・テンプレートなど）</li>
+                      <li>カテゴリ／タグによる絞り込み</li>
+                      <li>無料・利用可否（ライセンス）情報の明示</li>
+                      <li>素材のプレビュー表示</li>
+                      <li>素材保存（お気に入り）</li>
+                      <li>PC・スマホで問題なく使えるUI</li>
+                      <li>基本的な操作の分かりやすさ</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">狩野の品質モデル ― 一元的品質 / 無関心品質</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>一元的品質</h3>
+                      <ul>
+                        <li>検索の速さ・精度</li>
+                        <li>素材の探しやすさ（並び替え・おすすめ順）</li>
+                        <li>素材ジャンルの豊富さ</li>
+                        <li>ブックマーク・履歴管理のしやすさ</li>
+                        <li>グループでの素材共有（リンク共有）</li>
+                        <li>テンプレートの使いやすさ</li>
+                        <li>UIの見やすさ・操作の少なさ</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>無関心品質</h3>
+                      <ul>
+                        <li>派手なアニメーション演出</li>
+                        <li>カスタマイズ性が高すぎるUI設定</li>
+                        <li>SNS共有機能</li>
+                        <li>細かすぎる個人設定</li>
+                        <li>デザイン装飾を重視した演出</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">狩野の品質モデル ― 魅力的品質 / 逆品質</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>魅力的品質</h3>
+                      <ul>
+                        <li>テーマ・雰囲気入力による素材セット提案</li>
+                        <li>課題内容に合わせたおすすめテンプレ提示</li>
+                        <li>よく使う素材を学習したパーソナライズ表示</li>
+                        <li>提出用形式チェック（サイズ・拡張子など）</li>
+                        <li>制作フローを意識したナビゲーション</li>
+                        <li>学生向け制作事例・参考ギャラリー</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>逆品質</h3>
+                      <ul>
+                        <li>強制ログイン・会員登録</li>
+                        <li>過剰な通知やポップアップ</li>
+                        <li>広告表示が多いUI</li>
+                        <li>機能が多すぎて迷う画面構成</li>
+                        <li>初回起動時の長すぎるチュートリアル</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">サイトマップ</p>
+                  <div class="slidedeck__flow">
+                    <div class="slidedeck__flow-box">app icon</div>
+                    <span class="slidedeck__flow-arrow">→</span>
+                    <div class="slidedeck__flow-box">login</div>
+                    <span class="slidedeck__flow-arrow">→</span>
+                    <div class="slidedeck__flow-box">HOME</div>
+                    <div class="slidedeck__flow-branches">
+                      <div class="slidedeck__flow-branch">
+                        <span class="slidedeck__flow-arrow">→</span>
+                        <div class="slidedeck__flow-box">探す</div>
+                        <span class="slidedeck__flow-arrow">→</span>
+                        <div class="slidedeck__flow-box">素材詳細</div>
+                      </div>
+                      <div class="slidedeck__flow-branch">
+                        <span class="slidedeck__flow-arrow">→</span>
+                        <div class="slidedeck__flow-box">保存</div>
+                      </div>
+                      <div class="slidedeck__flow-branch">
+                        <span class="slidedeck__flow-arrow">→</span>
+                        <div class="slidedeck__flow-box">マイページ</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">要素の洗い出し ― ログイン／HOME</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>ログイン画面</h3>
+                      <ul>
+                        <li>アプリロゴ表示・サービス名表示</li>
+                        <li>ログインボタン／ゲスト利用ボタン</li>
+                        <li>SNSログイン（Google／Apple等）</li>
+                        <li>利用規約・プライバシーポリシーリンク</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>HOME画面</h3>
+                      <ul>
+                        <li>検索バー（最重要）</li>
+                        <li>素材カテゴリ／おすすめ・人気素材</li>
+                        <li>最近見た素材・保存一覧への導線</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">要素の洗い出し ― 素材検索／素材詳細</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>素材検索画面</h3>
+                      <ul>
+                        <li>素材一覧・サムネイル・素材名</li>
+                        <li>カテゴリ切り替え・タグ表示</li>
+                        <li>条件フィルタ・並び替え・件数表示</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>素材詳細画面</h3>
+                      <ul>
+                        <li>素材プレビュー（拡大表示）</li>
+                        <li>利用条件・ライセンス表示</li>
+                        <li>保存（お気に入り）・共有ボタン</li>
+                        <li>ダウンロード／コピー案内</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">要素の洗い出し ― お気に入り／マイページ</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>お気に入り画面</h3>
+                      <ul>
+                        <li>お気に入りにした素材一覧</li>
+                        <li>並び替え</li>
+                        <li>削除・管理機能</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>マイページ／設定</h3>
+                      <ul>
+                        <li>ユーザー情報・ログイン情報管理</li>
+                        <li>通知設定・表示設定</li>
+                        <li>ヘルプ／ログアウト／各種規約</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">キーワード</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__col">
+                      <h3 style="font-family: var(--font-mono); font-size: clamp(0.8rem, 1.4vw, 1rem); color: var(--fg);">Do</h3>
+                      <ul class="slidedeck__list">
+                        <li>シンプル／整理されている／直感的</li>
+                        <li>分かりやすい／効率的／安心感がある／迷わない</li>
+                        <li>軽い・スムーズ／学生向け／作業に集中できる</li>
+                        <li>統一感がある／ミニマル／実用的／クリーン</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__col">
+                      <h3 style="font-family: var(--font-mono); font-size: clamp(0.8rem, 1.4vw, 1rem); color: var(--fg);">Don't</h3>
+                      <ul class="slidedeck__list">
+                        <li>ごちゃごちゃした／情報過多／装飾過多</li>
+                        <li>操作が複雑／分かりにくい／派手すぎる</li>
+                        <li>プロ向けすぎる／広告感が強い／重たい動き</li>
+                        <li>学習コストが高い／迷わせる導線／世界観がブレる</li>
+                        <li>実用性のない演出／過剰なアニメーション</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">カラーマップ</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">図：キーワードイメージMAP（差し替え予定）</div>
+                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">図：配色のイメージスケール（差し替え予定）</div>
+                  </div>
+                  <p class="slidedeck__reason">reference: 株式会社日本カラーデザイン研究所「言語イメージスケール」「配色のイメージスケール」</p>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">配色</p>
+                  <div class="slidedeck__swatches">
+                    <div class="slidedeck__swatch">
+                      <span class="slidedeck__swatch-chip" style="background-color: #4285f4;"></span>
+                      <span class="slidedeck__swatch-label">Blue</span>
+                    </div>
+                    <div class="slidedeck__swatch">
+                      <span class="slidedeck__swatch-chip" style="background-color: #ffffff;"></span>
+                      <span class="slidedeck__swatch-label">White</span>
+                    </div>
+                    <div class="slidedeck__swatch">
+                      <span class="slidedeck__swatch-chip" style="background-color: #f1f2f4;"></span>
+                      <span class="slidedeck__swatch-label">Light Gray</span>
+                    </div>
+                    <div class="slidedeck__swatch">
+                      <span class="slidedeck__swatch-chip" style="background-color: #2b2b2e;"></span>
+                      <span class="slidedeck__swatch-label">Charcoal</span>
+                    </div>
+                    <div class="slidedeck__swatch">
+                      <span class="slidedeck__swatch-chip" style="background-color: #8a8a8e;"></span>
+                      <span class="slidedeck__swatch-label">Gray</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button class="slidedeck__arrow slidedeck__arrow--prev" type="button" aria-label="前のスライド">‹</button>
+            <button class="slidedeck__arrow slidedeck__arrow--next" type="button" aria-label="次のスライド">›</button>
+
+            <div class="slidedeck__footer">
+              <span class="slidedeck__counter"><span class="slidedeck__current">1</span> / <span class="slidedeck__total">22</span></span>
+              <div class="slidedeck__dots" role="tablist" aria-label="スライド選択"></div>
+            </div>
+          </div>
+          <p class="page-note">※ 発表スライドの内容をそのまま掲載しています。図版・写真部分は差し替え予定のプレースホルダーです。</p>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="container detail-body">
           <section class="detail-block reveal">
             <h2>概要</h2>
@@ -53,20 +487,55 @@
             <p id="purpose"></p>
           </section>
           <section class="detail-block reveal">
+            <h2>制作プロセス</h2>
+            <div class="process">
+              <div class="process__flow">
+                <span class="process__step">機能検討</span>
+                <span class="process__arrow">→</span>
+                <span class="process__step">自分でプロトタイプ作成</span>
+                <span class="process__arrow">→</span>
+                <span class="process__step">課題を整理</span>
+                <span class="process__arrow">→</span>
+                <span class="process__step">AIでUIをブラッシュアップ</span>
+                <span class="process__arrow">→</span>
+                <span class="process__step">自分で確認・修正</span>
+              </div>
+              <p>
+                まず必要な機能や画面遷移を整理し、自分でFigmaを使ってプロトタイプを作成しました。その後、作成したプロトタイプをもとにFigma Makeを活用し、余白や情報の優先順位、操作性などを改善しました。AIが生成したデザインをそのまま採用するのではなく、必要な機能や画面構成を指定し、生成結果を確認しながら調整しています。
+              </p>
+              <div class="process__compare">
+                <div>
+                  <div class="process__media">写真：初期プロトタイプ（差し替え予定）</div>
+                  <p class="process__compare-label">初期プロトタイプ</p>
+                </div>
+                <div>
+                  <div class="process__media">写真：ブラッシュアップ後（差し替え予定）</div>
+                  <p class="process__compare-label">ブラッシュアップ後</p>
+                </div>
+              </div>
+              <ul>
+                <li>情報量を整理</li>
+                <li>カテゴリを拡充</li>
+                <li>素材を見つけやすい構成へ変更</li>
+                <li>利用規約を視覚的に確認できるよう改善</li>
+                <li>タップ可能な要素を分かりやすくした</li>
+              </ul>
+            </div>
+          </section>
+          <section class="detail-block reveal">
             <h2>主な機能</h2>
             <ul id="functions"></ul>
           </section>
           <section class="detail-block reveal">
             <h2>工夫した点</h2>
-            <p id="point"></p>
+            <div id="point"></div>
           </section>
           <section class="detail-block reveal">
             <h2>学んだこと</h2>
             <p id="learned"></p>
           </section>
           <div class="detail-links reveal">
-            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">GitHub：準備中</a>
-            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">公開URL：準備中</a>
+            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">Figmaプロトタイプ：準備中</a>
           </div>
         </div>
       </section>
@@ -80,5 +549,6 @@
 
     <script src="../js/app.js"></script>
     <script src="../js/detail.js"></script>
+    <script src="../js/slidedeck.js"></script>
   </body>
 </html>
