@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>制作物詳細 | 宮川 麻実 ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-work="robotics">
+    <div class="cursor" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html#top">
+        Miyakawa Asami<span class="brand__reg">·</span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#connect">Connect</a>
+      </nav>
+      <a class="header-cta" href="../index.html#connect">
+        Let&apos;s talk <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <div class="container">
+          <a class="back-link" href="../index.html#work">← 制作物一覧へ戻る</a>
+          <span class="eyebrow">Work Detail</span>
+          <h1 class="detail-title" id="detailTitle"></h1>
+          <div class="tags detail-tags" id="detailTags"></div>
+        </div>
+      </section>
+
+      <section class="section slides-section">
+        <div class="container">
+          <div class="slidedeck reveal" aria-label="発表スライド">
+            <div class="slidedeck__viewport">
+              <div class="slidedeck__track">
+                <article class="slidedeck__slide slidedeck__cover">
+                  <div class="slidedeck__cover-content">
+                    <p class="slidedeck__label">Robotics Presentation</p>
+                    <h2 class="slidedeck__title">お菓子袋ラッピング<br />サポートロボ</h2>
+                  </div>
+                  <div class="slidedeck__cover-media">
+                    <img
+                      src="../public/images/robotics/cover.png"
+                      alt="お菓子袋をつかむロボットアーム"
+                    />
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">[ 概要 ]</p>
+                  <p class="slidedeck__lead">ラッピングの工程の一部を自動化し、作業を支援するロボット</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>[ 背景・課題 ]</h3>
+                      <ul>
+                        <li>手作業によるばらつき</li>
+                        <li>衛生面への配慮が必要</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>[ 制作前の構想 ]</h3>
+                      <ul>
+                        <li>自動で蛇腹折り</li>
+                        <li>タイで固定</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">[ 進める中で行った判断と設計の見直し ]</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__box">
+                      <h3>[ 機構・動作の変更 ]</h3>
+                      <ul>
+                        <li>押し込み式 → 挟み込み式</li>
+                      </ul>
+                      <p class="slidedeck__reason">- 理由 -</p>
+                      <ul>
+                        <li>ロボットアームで押し込むには難しいと判断</li>
+                        <li>挟み込む方が良いという助言を受けて変更</li>
+                      </ul>
+                    </div>
+                    <div class="slidedeck__box">
+                      <h3>[ 役割分担の見直し ]</h3>
+                      <ul>
+                        <li>袋のセットや位置固定は人が行う</li>
+                        <li>袋詰め作業との連携を考慮</li>
+                        <li>蛇腹折りをロボットの主な役割とした</li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">[ 構想に対してどこまで進んだか ]</p>
+                  <div class="slidedeck__grid">
+                    <div class="slidedeck__col">
+                      <div class="slidedeck__box">
+                        <h3>設計・準備</h3>
+                        <ul>
+                          <li>蛇腹折り用ジグザグ治具の設計・制作</li>
+                          <li>挟み込み式機構への形状変更を決定</li>
+                        </ul>
+                      </div>
+                      <div class="slidedeck__box">
+                        <h3>検証</h3>
+                        <ul>
+                          <li>動作の流れを人の手で検証</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="slidedeck__photos">
+                      <div class="slidedeck__photo slidedeck__photo--filled" style="aspect-ratio: 3 / 4;">
+                        <img src="../public/images/robotics/jig-zigzag.jpg" alt="蛇腹折り用ジグザグ治具" />
+                      </div>
+                      <div class="slidedeck__photo slidedeck__photo--filled" style="aspect-ratio: 4 / 3;">
+                        <img src="../public/images/robotics/jig-parts.jpg" alt="治具パーツ" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slidedeck__slide">
+                  <p class="slidedeck__label">[ まとめ ]</p>
+                  <ul class="slidedeck__list slidedeck__list--summary">
+                    <li>完全自動ではなく、人と協力する形に構想を変更した</li>
+                    <li>蛇腹折り工程が最も手間とばらつきの出やすい作業だと分かった</li>
+                    <li>ロボットにはその工程を支援させるのが現実的だと考えた</li>
+                    <li>今後はロボットアームによる自動動作の実装を目指す</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+
+            <button class="slidedeck__arrow slidedeck__arrow--prev" type="button" aria-label="前のスライド">‹</button>
+            <button class="slidedeck__arrow slidedeck__arrow--next" type="button" aria-label="次のスライド">›</button>
+
+            <div class="slidedeck__footer">
+              <span class="slidedeck__counter"><span class="slidedeck__current">1</span> / <span class="slidedeck__total">5</span></span>
+              <div class="slidedeck__dots" role="tablist" aria-label="スライド選択"></div>
+            </div>
+          </div>
+          <p class="page-note">※ 発表スライドの内容をそのまま掲載しています。</p>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="container">
+          <span class="eyebrow">Photos &amp; Video</span>
+          <h2 class="media-gallery__title">写真・動画</h2>
+          <div class="media-gallery">
+            <button
+              type="button"
+              class="media-gallery__video media-gallery__video--filled"
+              data-lightbox="video"
+              data-src="../public/videos/robotics-demo.mp4"
+            >
+              <video src="../public/videos/robotics-demo.mp4" muted playsinline preload="metadata"></video>
+              <span class="media-gallery__video-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="media-gallery__photos">
+              <button
+                type="button"
+                class="media-gallery__photo media-gallery__photo--filled"
+                style="aspect-ratio: 3 / 4;"
+                data-lightbox="image"
+                data-src="../public/images/robotics/jig-zigzag.jpg"
+                data-alt="蛇腹折り用ジグザグ治具"
+              >
+                <img src="../public/images/robotics/jig-zigzag.jpg" alt="蛇腹折り用ジグザグ治具" />
+              </button>
+              <button
+                type="button"
+                class="media-gallery__photo media-gallery__photo--filled"
+                style="aspect-ratio: 4 / 3;"
+                data-lightbox="image"
+                data-src="../public/images/robotics/jig-parts.jpg"
+                data-alt="治具パーツ"
+              >
+                <img src="../public/images/robotics/jig-parts.jpg" alt="治具パーツ" />
+              </button>
+            </div>
+          </div>
+          <p class="page-note">※ クリックすると拡大して表示できます。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container detail-body">
+          <section class="detail-block reveal">
+            <h2>概要</h2>
+            <p id="overview"></p>
+          </section>
+          <section class="detail-block reveal">
+            <h2>制作目的</h2>
+            <p id="purpose"></p>
+          </section>
+          <section class="detail-block reveal">
+            <h2>主な機能</h2>
+            <ul id="functions"></ul>
+          </section>
+          <section class="detail-block reveal">
+            <h2>工夫した点</h2>
+            <p id="point"></p>
+          </section>
+          <section class="detail-block reveal">
+            <h2>学んだこと</h2>
+            <p id="learned"></p>
+          </section>
+          <div class="detail-links reveal">
+            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">GitHub：準備中</a>
+            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">公開URL：準備中</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 宮川 麻実</span>
+      <span>Designed &amp; Coded in Japan</span>
+      <a href="../index.html#top">トップへ戻る <span aria-hidden="true">↑</span></a>
+    </footer>
+
+    <div class="lightbox" aria-hidden="true">
+      <button type="button" class="lightbox__close" aria-label="閉じる">×</button>
+      <div class="lightbox__content"></div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/detail.js"></script>
+    <script src="../js/slidedeck.js"></script>
+    <script src="../js/lightbox.js"></script>
+  </body>
+</html>

@@ -81,6 +81,14 @@
      --------------------------------------------------------- */
   var works = [
     {
+      title: "お菓子袋ラッピングサポートロボ",
+      href: "works/robotics.html",
+      img: "./public/images/robotics/preview.png",
+      alt: "お菓子袋ラッピングサポートロボのイメージ",
+      desc: "お菓子袋のラッピング工程を支援するロボット構想。CAD設計と3Dプリンターで蛇腹折り用の治具を製作し、SO-101アームでの活用を想定して設計しました。",
+      tags: ["CAD", "3Dプリンター", "SO-101"],
+    },
+    {
       title: "Anime Search App",
       href: "works/anime.html",
       img: "./public/images/anime-search.png",
