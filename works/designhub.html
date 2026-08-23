@@ -61,7 +61,9 @@
                 <article class="slidedeck__slide">
                   <p class="slidedeck__label">ペルソナ 1</p>
                   <div class="slidedeck__persona">
-                    <div class="slidedeck__photo slidedeck__persona-photo" style="aspect-ratio: 3 / 4;">写真：木村ひかるさん（差し替え予定）</div>
+                    <div class="slidedeck__photo slidedeck__photo--media slidedeck__persona-photo" style="aspect-ratio: 1 / 1;">
+                      <img src="../public/images/designhub/persona-1.jpg" alt="ペルソナ：木村ひかるさん" />
+                    </div>
                     <div class="slidedeck__persona-info">
                       <p><strong>木村 ひかる</strong>（20歳・男性・Webデザイン系専攻）</p>
                       <p class="slidedeck__meta-text">さいたまIT・WEB専門学校 1年／実家暮らし／飲食店バイト週3／ノートPC（Windows）・スマホ（Android）</p>
@@ -121,7 +123,9 @@
                 <article class="slidedeck__slide">
                   <p class="slidedeck__label">ペルソナ 2</p>
                   <div class="slidedeck__persona">
-                    <div class="slidedeck__photo slidedeck__persona-photo" style="aspect-ratio: 3 / 4;">写真：天野ほのかさん（差し替え予定）</div>
+                    <div class="slidedeck__photo slidedeck__photo--media slidedeck__persona-photo" style="aspect-ratio: 4 / 3;">
+                      <img src="../public/images/designhub/persona-2.jpg" alt="ペルソナ：天野ほのかさん" />
+                    </div>
                     <div class="slidedeck__persona-info">
                       <p><strong>天野 ほのか</strong>（19歳・女性・UI・Webデザイン志望）</p>
                       <p class="slidedeck__meta-text">さいたまIT・WEB専門学校 2年／ひとり暮らし／雑貨店バイト週2／Figma・Canva・CodePen・Coolors</p>
@@ -180,10 +184,16 @@
 
                 <article class="slidedeck__slide">
                   <p class="slidedeck__label">ムードボード</p>
-                  <div class="slidedeck__grid" style="grid-template-columns: 1.6fr 1fr 1fr;">
-                    <div class="slidedeck__photo" style="aspect-ratio: 16 / 9;">写真：ムードボード（スマホ画面3枚・差し替え予定）</div>
-                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">図：ワークスペース構成イメージ（差し替え予定）</div>
-                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">写真：参考アプリのストア画面（差し替え予定）</div>
+                  <div class="slidedeck__grid" style="grid-template-columns: 1.6fr 1fr 1fr; align-items: start;">
+                    <div class="slidedeck__photo slidedeck__photo--media" style="aspect-ratio: 4 / 3;">
+                      <img src="../public/images/designhub/moodboard-phones.webp" alt="ムードボード：スマホ画面3枚" />
+                    </div>
+                    <div class="slidedeck__photo slidedeck__photo--media" style="aspect-ratio: 16 / 9;">
+                      <img src="../public/images/designhub/moodboard-workspace.avif" alt="ワークスペース構成イメージ" />
+                    </div>
+                    <div class="slidedeck__photo slidedeck__photo--media" style="aspect-ratio: 4 / 5;">
+                      <img src="../public/images/designhub/moodboard-reference.webp" alt="参考アプリのストア画面" />
+                    </div>
                   </div>
                 </article>
 
@@ -233,7 +243,9 @@
 
                 <article class="slidedeck__slide" style="align-items: center; text-align: center;">
                   <p class="slidedeck__label">Logo mark</p>
-                  <div class="slidedeck__photo" style="aspect-ratio: 16 / 9; max-width: 420px;">ロゴ画像（差し替え予定）</div>
+                  <div class="slidedeck__photo slidedeck__photo--media" style="aspect-ratio: 1 / 1; max-width: 280px; margin-inline: auto;">
+                    <img src="../public/images/designhub/logo-mark.png" alt="DesignHub ロゴマーク" style="object-fit: contain;" />
+                  </div>
                 </article>
 
                 <article class="slidedeck__slide">
@@ -429,11 +441,19 @@
 
                 <article class="slidedeck__slide">
                   <p class="slidedeck__label">カラーマップ</p>
-                  <div class="slidedeck__grid">
-                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">図：キーワードイメージMAP（差し替え予定）</div>
-                    <div class="slidedeck__photo" style="aspect-ratio: 4 / 3;">図：配色のイメージスケール（差し替え予定）</div>
+                  <p class="slidedeck__axis-top">SOFT（やわらかい）</p>
+                  <div class="slidedeck__axis-row">
+                    <span class="slidedeck__axis-label">WARM（暖かい）</span>
+                    <div class="slidedeck__quadrant">
+                      <div class="slidedeck__quadrant-cell"></div>
+                      <div class="slidedeck__quadrant-cell slidedeck__quadrant-cell--highlight">クリア・さわやか</div>
+                      <div class="slidedeck__quadrant-cell"></div>
+                      <div class="slidedeck__quadrant-cell"></div>
+                    </div>
+                    <span class="slidedeck__axis-label">COOL（クールな）</span>
                   </div>
-                  <p class="slidedeck__reason">reference: 株式会社日本カラーデザイン研究所「言語イメージスケール」「配色のイメージスケール」</p>
+                  <p class="slidedeck__axis-bottom">HARD（かたい）</p>
+                  <p class="slidedeck__reason">配色のポジションは「言語イメージスケール」（株式会社日本カラーデザイン研究所）の考え方を参考にした簡易図です。著作権の関係で原資料の図版は掲載せず、位置関係のみを示しています。</p>
                 </article>
 
                 <article class="slidedeck__slide">
@@ -472,7 +492,7 @@
               <div class="slidedeck__dots" role="tablist" aria-label="スライド選択"></div>
             </div>
           </div>
-          <p class="page-note">※ 発表スライドの内容をそのまま掲載しています。図版・写真部分は差し替え予定のプレースホルダーです。</p>
+          <p class="page-note">※ 発表スライドの内容をそのまま掲載しています。</p>
         </div>
       </section>
 
@@ -505,12 +525,40 @@
               </p>
               <div class="process__compare">
                 <div>
-                  <div class="process__media">写真：初期プロトタイプ（差し替え予定）</div>
-                  <p class="process__compare-label">初期プロトタイプ</p>
+                  <a
+                    class="process__media"
+                    style="aspect-ratio: 871 / 1781; display: block;"
+                    href="https://www.figma.com/proto/xZ1xodlaSEwPubgJYig9X3/24010034_MobileApp?node-id=6003-419&p=f&viewport=831%2C65%2C0.78&t=YalRwBpK6dQAb1LM-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=6003%3A419&page-id=6003%3A418"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="../public/images/designhub/process-before.png" alt="初期プロトタイプ" />
+                  </a>
+                  <p class="process__compare-label">
+                    <a
+                      href="https://www.figma.com/proto/xZ1xodlaSEwPubgJYig9X3/24010034_MobileApp?node-id=6003-419&p=f&viewport=831%2C65%2C0.78&t=YalRwBpK6dQAb1LM-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=6003%3A419&page-id=6003%3A418"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >初期プロトタイプ ↗</a>
+                  </p>
                 </div>
                 <div>
-                  <div class="process__media">写真：ブラッシュアップ後（差し替え予定）</div>
-                  <p class="process__compare-label">ブラッシュアップ後</p>
+                  <a
+                    class="process__media"
+                    style="aspect-ratio: 855 / 1738; display: block;"
+                    href="https://www.figma.com/make/znQP3FULUgcZkcnIExaCVw/Redesign-Free-Material-App-UI?fullscreen=1&t=ParzrU8VaEaHP0ab-1&code-node-id=0-6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="../public/images/designhub/process-after.png" alt="ブラッシュアップ後" />
+                  </a>
+                  <p class="process__compare-label">
+                    <a
+                      href="https://www.figma.com/make/znQP3FULUgcZkcnIExaCVw/Redesign-Free-Material-App-UI?fullscreen=1&t=ParzrU8VaEaHP0ab-1&code-node-id=0-6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >ブラッシュアップ後 ↗</a>
+                  </p>
                 </div>
               </div>
               <ul>
@@ -535,7 +583,18 @@
             <p id="learned"></p>
           </section>
           <div class="detail-links reveal">
-            <a class="btn btn--ghost is-disabled" aria-disabled="true" href="#">Figmaプロトタイプ：準備中</a>
+            <a
+              class="btn btn--ghost"
+              href="https://www.figma.com/proto/xZ1xodlaSEwPubgJYig9X3/24010034_MobileApp?node-id=6003-419&p=f&viewport=831%2C65%2C0.78&t=YalRwBpK6dQAb1LM-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=6003%3A419&page-id=6003%3A418"
+              target="_blank"
+              rel="noopener noreferrer"
+            >初期プロトタイプ（Figma） <span aria-hidden="true">↗</span></a>
+            <a
+              class="btn btn--ghost"
+              href="https://www.figma.com/make/znQP3FULUgcZkcnIExaCVw/Redesign-Free-Material-App-UI?fullscreen=1&t=ParzrU8VaEaHP0ab-1&code-node-id=0-6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >ブラッシュアップ後プロトタイプ（Figma Make） <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>

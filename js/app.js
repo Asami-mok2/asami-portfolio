@@ -91,7 +91,7 @@
     {
       title: "DesignHub",
       href: "works/designhub.html",
-      img: "./public/images/designhub/designhub.svg",
+      img: "./public/images/designhub/cover.png",
       alt: "DesignHub のイメージ",
       desc: "Web上にあるフリー素材を検索・閲覧・管理できるスマートフォンアプリ。カテゴリやキーワードから素材を探し、利用条件をひと目で確認できるようにしました。",
       tags: ["Figma", "Prototype", "UI/UX"],
