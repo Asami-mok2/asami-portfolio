@@ -172,4 +172,18 @@
       { passive: true }
     );
   }
+
+  /* ---------------------------------------------------------
+     Footer: last-updated date (from the file's own timestamp)
+     --------------------------------------------------------- */
+  var updatedEl = document.getElementById("updated-date");
+  if (updatedEl) {
+    var modified = new Date(document.lastModified);
+    if (!isNaN(modified.getTime())) {
+      var y2 = modified.getFullYear();
+      var m2 = String(modified.getMonth() + 1).padStart(2, "0");
+      var d2 = String(modified.getDate()).padStart(2, "0");
+      updatedEl.textContent = "Last updated: " + y2 + "." + m2 + "." + d2;
+    }
+  }
 })();
