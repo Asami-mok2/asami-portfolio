@@ -22,13 +22,12 @@
 
 ### OGP
 
-- [ ] OGPを設定する
+- [x] OGPを設定する
   - [x] OGP用画像を作成する（public/images/ogp.png）
   - [x] og:titleを設定する
   - [x] og:descriptionを設定する
   - [x] og:imageを設定する
-  - [ ] URL共有時の表示を確認する
-    - メモ：og:url / og:image は仮の https://asami-portfolio.netlify.app/ を使用中。実際のNetlify URL（または独自ドメイン）が決まり次第、index.html内のOGPタグを差し替えてから確認する
+  - [x] URL共有時の表示を確認する（<https://asami-portfolio.netlify.app/> で確認済み）
 
 ### Skills
 
