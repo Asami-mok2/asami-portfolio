@@ -157,6 +157,7 @@
   var header = document.querySelector(".site-header");
   var lastY = window.scrollY;
   if (header) {
+    header.classList.toggle("is-scrolled", window.scrollY > 10);
     window.addEventListener(
       "scroll",
       function () {
@@ -166,7 +167,7 @@
         } else {
           header.style.transform = "translateY(0)";
         }
-        header.style.transition = "transform 0.4s ease";
+        header.classList.toggle("is-scrolled", y > 10);
         lastY = y;
       },
       { passive: true }

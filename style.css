@@ -95,10 +95,20 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 22px var(--pad-x);
-  transition: transform 0.4s ease, background-color 0.4s ease;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: transform 0.4s ease, background-color 0.4s ease,
+    border-color 0.4s ease, box-shadow 0.4s ease;
 }
 .site-header.is-hidden {
   transform: translateY(-100%);
+}
+.site-header.is-scrolled {
+  background-color: rgba(247, 242, 238, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: var(--line);
+  box-shadow: 0 12px 30px -24px rgba(51, 41, 43, 0.4);
 }
 
 .brand {
