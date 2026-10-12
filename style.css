@@ -1033,6 +1033,30 @@ a {
   border-radius: 999px;
   padding: 6px 14px;
 }
+.detail-meta {
+  list-style: none;
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  max-width: 52ch;
+}
+.detail-meta li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.detail-meta li span:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+.detail-meta li span:last-child {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--fg);
+}
 .detail-media {
   border: 1px solid var(--line);
   border-radius: 18px;

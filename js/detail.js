@@ -22,7 +22,11 @@ const details = {
   designhub: {
     title: "DesignHub",
     image: "../public/images/designhub/designhub.svg",
-    tags: ["Figma", "Prototype", "UI/UX"],
+    tags: ["Figma", "Figma Make", "UI/UX"],
+    format: "個人制作",
+    role: "企画・要件整理から、Figmaを使用したUIデザイン、プロトタイプ制作・改善までを担当。",
+    tools: "Figma／Figma Make",
+    duration: "約24時間（授業時間をもとに算出）",
     overview:
       "Web上にあるフリー素材を、検索・閲覧・管理できるスマートフォンアプリです。画像やイラスト、アイコンなどの素材をカテゴリやキーワードから探し、素材ごとの利用条件を確認できます。気になった素材はお気に入りに登録でき、必要な素材を後からまとめて確認できるように設計しました。",
     purpose:
@@ -68,7 +72,11 @@ const details = {
   },
   robotics: {
     title: "お菓子袋ラッピングサポートロボ",
-    tags: ["CAD", "3Dプリンター", "SO-101"],
+    tags: ["CAD", "3Dプリンター"],
+    format: "個人制作",
+    role: "課題整理から機構設計、CADによる設計、3Dプリンターを使用した治具製作・動作検証までを担当。",
+    tools: "Tinkercad（CAD）／3Dプリンター",
+    duration: "約24時間（授業時間をもとに算出）",
     overview:
       "お菓子袋のラッピング工程の一部を自動化し、作業を支援するロボットです。手作業で生じる仕上がりのばらつきや衛生面の課題を、機構による補助で軽減することを目指しました。",
     purpose:
@@ -111,6 +119,10 @@ if (root) {
     }
 
     setHtml("detailTags", work.tags.map((tag) => `<span class="tag">${tag}</span>`).join(""));
+    setText("detailFormat", work.format);
+    setText("detailRole", work.role);
+    setText("detailTools", work.tools);
+    setText("detailDuration", work.duration);
     setText("overview", work.overview);
     setText("purpose", work.purpose);
     setHtml("functions", work.functions.map((item) => `<li>${item}</li>`).join(""));

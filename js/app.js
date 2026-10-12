@@ -85,8 +85,8 @@
       href: "works/robotics.html",
       img: "./public/images/robotics/preview.png",
       alt: "お菓子袋ラッピングサポートロボのイメージ",
-      desc: "お菓子袋のラッピング工程を支援するロボット構想。CAD設計と3Dプリンターで蛇腹折り用の治具を製作し、SO-101アームでの活用を想定して設計しました。",
-      tags: ["CAD", "3Dプリンター", "SO-101"],
+      desc: "お菓子袋のラッピング工程を支援するロボット構想。CAD設計と3Dプリンターで蛇腹折り用の治具を製作し、挟み込み式の固定機構を検証しました。",
+      tags: ["CAD", "3Dプリンター"],
     },
     {
       title: "DesignHub",
@@ -94,7 +94,7 @@
       img: "./public/images/designhub/cover.png",
       alt: "DesignHub のイメージ",
       desc: "Web上にあるフリー素材を検索・閲覧・管理できるスマートフォンアプリ。カテゴリやキーワードから素材を探し、利用条件をひと目で確認できるようにしました。",
-      tags: ["Figma", "Prototype", "UI/UX"],
+      tags: ["Figma", "Figma Make", "UI/UX"],
     },
   ];
 
