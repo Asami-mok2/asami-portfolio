@@ -448,6 +448,11 @@ a {
   padding: clamp(72px, 12vw, 160px) var(--pad-x);
   border-bottom: 1px solid var(--line);
 }
+.about__top,
+.about__body {
+  max-width: 1440px;
+  margin-inline: auto;
+}
 .about__top {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
