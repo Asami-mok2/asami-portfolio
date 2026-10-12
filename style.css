@@ -1944,6 +1944,9 @@ a.process__media:focus-visible {
   .header-cta {
     display: none;
   }
+  .about__lead .nowrap {
+    white-space: normal;
+  }
   .hero__meta {
     flex-direction: column;
     align-items: flex-start;
