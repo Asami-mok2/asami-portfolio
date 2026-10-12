@@ -6,7 +6,7 @@
   --bg: #f7f2ee;
   --bg-soft: #efe6df;
   --fg: #33292b;
-  --fg-muted: #9a8b86;
+  --fg-muted: #665c58;
   --line: rgba(51, 41, 43, 0.12);
   --accent: #c76b7a;
   --accent-soft: rgba(199, 107, 122, 0.16);
@@ -436,9 +436,10 @@ a {
   display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.74rem;
+  font-weight: 400;
   letter-spacing: 0.1em;
   color: var(--accent);
-  margin-bottom: 40px;
+  margin: 0 0 40px;
 }
 
 /* =========================================================

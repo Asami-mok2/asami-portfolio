@@ -41,9 +41,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -145,7 +158,7 @@
 
       <!-- アバウト -->
       <section class="about" id="about">
-        <span class="section-label" data-reveal>（01）自己紹介</span>
+        <h2 class="section-label" data-reveal>（01）自己紹介</h2>
         <div class="about__top">
           <p class="about__lead" data-reveal>
             <em class="nowrap">「考えて、整えて、形にする。」</em><br />学生開発者です。
@@ -231,7 +244,7 @@
 
       <!-- スキル -->
       <section class="skills" id="skills">
-        <span class="section-label" data-reveal>（02）スキル</span>
+        <h2 class="section-label" data-reveal>（02）スキル</h2>
         <p class="skills__note" data-reveal>
           授業や個人制作を通して、実際に手を動かしながら身につけてきた技術です。
         </p>
@@ -382,7 +395,7 @@
       <!-- ワーク -->
       <section class="work" id="work">
         <div class="work__head">
-          <span class="section-label" data-reveal>（03）制作物</span>
+          <h2 class="section-label" data-reveal>（03）制作物</h2>
         </div>
 
         <div class="workpanel" data-reveal>
@@ -439,7 +452,7 @@
 
       <!-- コネクト -->
       <section class="connect" id="connect">
-        <span class="section-label" data-reveal>（04）お問い合わせ</span>
+        <h2 class="section-label" data-reveal>（04）お問い合わせ</h2>
         <h2 class="connect__title" data-reveal>
           いっしょに、<br />いいもの<span class="accent">作りたい。</span>
         </h2>
