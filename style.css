@@ -1988,6 +1988,14 @@ a.process__media:focus-visible {
   .slidedeck__footer {
     padding: 10px 14px;
   }
+  .slidedeck__slide {
+    padding-inline: clamp(20px, 6vw, 48px);
+  }
+  .process__compare {
+    grid-template-columns: 1fr;
+    max-width: 220px;
+    margin-inline: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
