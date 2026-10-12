@@ -230,9 +230,6 @@ a {
 }
 .hero__title .line {
   display: block;
-  overflow: hidden;
-  padding-bottom: 0.18em;
-  margin-bottom: -0.18em;
 }
 .line--accent {
   color: var(--accent);
@@ -251,6 +248,8 @@ a {
   letter-spacing: 0;
   color: var(--fg-muted);
   align-self: flex-start;
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.12s;
 }
 .hero__identity {
   display: flex;
@@ -276,6 +275,8 @@ a {
     color 0.25s ease,
     border-color 0.25s ease,
     transform 0.25s ease;
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.18s;
 }
 
 .hero__github:hover,
@@ -298,15 +299,18 @@ a {
   height: 100%;
 }
 
-/* rising word reveal */
+/* ヒーローの見出し文字はLCP計測対象になるため演出アニメーションを付けない
+   （opacity:0やoverflow:hiddenで初回ペイント時に不可視にすると、
+   後で見えるようになってもLCPの計測対象から恒久的に除外されてしまうため） */
 .word {
   display: inline-block;
-  transform: translateY(110%);
-  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
-[data-reveal].is-in .word,
-.word.is-in {
-  transform: translateY(0);
+
+/* ヒーロー内のその他の要素はCSSだけで読み込みと同時に再生する
+   （ヒーローは常に初回表示範囲内にあるため、スクロール検知＝JSを待つ必要がない） */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero__main {
@@ -330,6 +334,8 @@ a {
   font-size: clamp(0.9rem, 1.3vw, 1.05rem);
   line-height: 1.9;
   color: var(--fg-muted);
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
 }
 
 /* コードスニペット風カード（IT / プログラマー感） */
@@ -343,6 +349,8 @@ a {
   box-shadow: 0 18px 40px -28px rgba(51, 41, 43, 0.5);
   overflow: hidden;
   backdrop-filter: blur(4px);
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.24s;
 }
 .codecard__bar {
   display: flex;
@@ -411,6 +419,8 @@ a {
   align-items: center;
   gap: 8px;
   color: var(--fg);
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.36s;
 }
 .scroll-hint span {
   animation: bob 1.8s ease-in-out infinite;
