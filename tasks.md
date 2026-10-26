@@ -90,6 +90,49 @@
     - [x] 左右の余白が適切に確保され、各セクションのレイアウトが崩れていない（同上）
     - [x] PC表示に悪影響がない（修正範囲が620px以下のメディアクエリ内のみのため）
 
+### 授業課題：GA4・SEO・OGPの設定（KPI期限：2026.11.16）
+
+- 目的：授業で設定したKPIを計測できるようにし、検索・SNS共有時の表示を整える
+- 公開URL：<https://asami-portfolio.pages.dev/>（Cloudflare Pages／GitHub連携、ビルドなしの静的サイト）
+- 方針：既存のデザイン・機能は変えず、設定と計測処理だけを追加する。pushと本番反映はしない（ローカルで完了）
+- [x] 現状を確認する（構成・既存のSEO/OGP・GA4の導入状況）（GA4は未導入。OGPのURLが旧netlify.appのまま。詳細ページはtitleが「制作物詳細」でdescription・canonical・OGPなし。Cloudflare Pagesは.html付きURLを拡張子なしに308リダイレクト）
+- [~] GA4を導入する（js/analytics.jsに集約。測定ID設定済み。GA4管理画面の設定と公開後の確認が残り）
+  - [x] 全ページ（トップ・DesignHub・Robotics）にGA4タグを入れる（各ページのheadでjs/analytics.jsを読み込む。本番ドメインでのみ計測）
+  - [x] 測定ID（G-〜）を設定する（G-JQ0D1S25B1。実IDでgtag.jsの読み込みと、page_view・works_section_view・github_clickが各1回送信されることをローカルで確認）
+  - [~] ページビューを計測する（トップ内のハッシュ移動で重複させない）（コード側は1ページ表示につき1回。GA4管理画面で「ブラウザの履歴イベントに基づくページの変更」をオフにする作業が残り）
+  - [x] Worksセクション到達のカスタムイベントを追加する（1ページ表示につき1回だけ）（works_section_view。#workの上端が画面中央に来た時点で送信）
+  - [~] GitHubリンクのクリックを計測する（拡張計測機能の離脱クリックと重複させない）（github_clickを追加。GA4管理画面で「離脱クリック」をオフにする作業が残り）
+  - [x] 個人情報を送らない・二重計測しない（送るのはページ情報とGitHubのURL・リンクの場所のみ。タグの二重読み込みを防止）
+- [ ] KPIを計測できるようにする
+  - 【届いた】トップの表示回数（ページビュー）：現在0回 → 目標15回
+  - 【読まれた】Worksまでスクロールした回数：現在0回 → 目標5回
+  - 【◎動いた】GitHubへのリンクのクリック（離脱クリック）：現在0回 → 目標2回
+  - [x] KPIごとにGA4管理画面での確認場所をまとめる（届いた：エンゲージメント→ページとスクリーンの「/」の表示回数／読まれた・動いた：エンゲージメント→イベントのworks_section_view・github_click）
+- [x] SEO（トップ）を設定する（修正前の値も記録する）
+  - 修正前 title：Miyakawa Asami — 学生開発者 / ポートフォリオ
+  - 修正前 description：埼玉を拠点に活動する学生開発者、宮川 麻実のポートフォリオ。使いやすさを大切に、Web とアプリを制作しています。
+  - 修正前 canonical：未設定
+  - [x] title：Miyakawa Asami｜学生開発者のポートフォリオ
+  - [x] meta description：Web・アプリ開発に取り組む学生開発者、宮川麻実のポートフォリオ。制作実績やスキル、開発で大切にしている考え方を紹介しています。
+  - [x] canonical：<https://asami-portfolio.pages.dev/>（#topは含めない）
+  - [x] 詳細ページのtitle・description・canonicalを確認し、ページごとの内容で設定する（canonicalは拡張子なしの/works/designhub・/works/robotics）
+- [x] OGPを設定する
+  - [x] og:title／og:type／og:image／og:urlを確認・設定する（og:urlは<https://asami-portfolio.pages.dev/>）
+  - [x] 旧ドメイン（netlify.app）のURLを新ドメインに直す
+  - [x] 既存のOGP画像（public/images/ogp.png、1200×630px）を再利用する
+  - [x] 画像URLが直接開けること、canonicalとog:urlの一致を確認する（画像は本番URLで200・image/pngを確認。全3ページでcanonicalとog:urlが一致）
+- [x] プライバシー表示・同意管理の必要性を確認する（GA4の利用規約上、GA4を使っている旨の表示が必要。追加するかは自分で判断）
+- [ ] 動作確認をする
+  - [x] GA4タグの読み込み・ページビュー・Works到達・GitHubクリックをローカルで確認する（Playwrightでテスト用IDに差し替え、Googleへは送信せずに確認）
+  - [x] SEO・OGPがHTMLに反映されているか確認する
+  - [x] PC・スマホの表示が崩れていないか確認する（1280px・375pxで横スクロールなし、JSエラーなし）
+  - [ ] GA4のリアルタイムで確認する（自分で行う・公開後）
+- [x] FigJam用に結果をまとめる
+- [ ] 変更をコミット・pushして本番に反映する（自分で行う）
+- [ ] 公開後、GA4のリアルタイムで3つのイベントを確認する（自分で行う）
+- [ ] 公開後、リンクカードの表示を確認する（自分で行う）
+- [ ] GA4を使っている旨の表示をフッターに入れるか決める
+
 ---
 
 ## 中優先度
@@ -142,7 +185,7 @@
 
 ### アクセス解析
 
-- [ ] 導入するアクセス解析ツールを選定する
+- [x] 導入するアクセス解析ツールを選定する（授業課題に合わせてGA4に決定。作業は「高優先度／授業課題：GA4・SEO・OGPの設定」を参照）
   - 候補：GA4 / Cloudflare Web Analytics / Plausible
 - [ ] アクセス解析を導入する
 - [ ] ページビューを確認できるようにする

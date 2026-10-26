@@ -99,7 +99,7 @@ if (root) {
   const work = details[key];
 
   if (work) {
-    document.title = `${work.title} | 宮川 麻実 ポートフォリオ`;
+    document.title = `${work.title}｜Miyakawa Asami ポートフォリオ`;
 
     const setText = (id, value) => {
       const el = document.getElementById(id);
