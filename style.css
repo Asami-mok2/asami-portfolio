@@ -1033,6 +1033,17 @@ a {
 .site-footer a:hover {
   color: var(--accent);
 }
+.site-footer__note {
+  flex-basis: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+.site-footer__note a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 /* =========================================================
    Work detail pages (works/*.html)
