@@ -2,31 +2,11 @@
   "use strict";
 
   /* ---------------------------------------------------------
-     GA4 settings
+     GA4 custom events
+     GA4のタグ（gtag.js・page_view）は各ページの<head>直後で読み込む。
+     ここではKPI用のカスタムイベントだけを送る
      --------------------------------------------------------- */
-  // GA4の測定ID（「G-」から始まるID）。管理画面で取得したIDに置き換える
-  var MEASUREMENT_ID = "G-JQ0D1S25B1";
-  // 本番のURLでだけ計測する（ローカル確認やプレビューの閲覧をKPIに含めない）
-  var PRODUCTION_HOST = "asami-portfolio.pages.dev";
-
-  if (!/^G-[A-Z0-9]+$/.test(MEASUREMENT_ID) || MEASUREMENT_ID === "G-XXXXXXXXXX") return;
-  if (location.hostname !== PRODUCTION_HOST) return;
-  // guard against loading the tag twice
-  if (window.__gaInitialized) return;
-  window.__gaInitialized = true;
-
-  var tag = document.createElement("script");
-  tag.async = true;
-  tag.src = "https://www.googletagmanager.com/gtag/js?id=" + MEASUREMENT_ID;
-  document.head.appendChild(tag);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () {
-    window.dataLayer.push(arguments);
-  };
-  window.gtag("js", new Date());
-  // page_view is sent once here on each page load
-  window.gtag("config", MEASUREMENT_ID);
+  if (typeof window.gtag !== "function") return;
 
   var init = function () {
     /* -------------------------------------------------------

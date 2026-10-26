@@ -97,7 +97,8 @@
 - 方針：既存のデザイン・機能は変えず、設定と計測処理だけを追加する。pushと本番反映はしない（ローカルで完了）
 - [x] 現状を確認する（構成・既存のSEO/OGP・GA4の導入状況）（GA4は未導入。OGPのURLが旧netlify.appのまま。詳細ページはtitleが「制作物詳細」でdescription・canonical・OGPなし。Cloudflare Pagesは.html付きURLを拡張子なしに308リダイレクト）
 - [x] GA4を導入する（js/analytics.jsに集約。測定ID設定済み・本番反映済み）
-  - [x] 全ページ（トップ・DesignHub・Robotics）にGA4タグを入れる（各ページのheadでjs/analytics.jsを読み込む。本番ドメインでのみ計測）
+  - [x] 全ページ（トップ・DesignHub・Robotics）にGA4タグを入れる（GA4管理画面の公式タグを各ページの<head>直後に設置。js/analytics.jsはKPI用のカスタムイベント送信のみを担当し、タグは各ページ1つ）
+    - メモ：公式タグにしたため、ローカル（localhost）で開いた場合も計測される。自分の閲覧を除外したい場合はGA4の「内部トラフィックの定義」とデータフィルタを使う
   - [x] 測定ID（G-〜）を設定する（G-JQ0D1S25B1。実IDでgtag.jsの読み込みと、page_view・works_section_view・github_clickが各1回送信されることをローカルで確認）
   - [x] ページビューを計測する（トップ内のハッシュ移動で重複させない）（本番で、ヘッダーリンクで#about→#skills→#workと移動してもpage_viewは1回だけなのを確認）
   - [x] Worksセクション到達のカスタムイベントを追加する（1ページ表示につき1回だけ）（works_section_view。#workの上端が画面中央に来た時点で送信）
