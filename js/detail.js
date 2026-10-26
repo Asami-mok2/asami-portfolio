@@ -139,6 +139,26 @@ if (root) {
     }
 
     setText("learned", work.learned);
+
+    // トップのWorks一覧と同じ並び順。制作物を追加したらここにも追加する
+    const workOrder = ["robotics", "designhub"];
+    const pager = document.getElementById("workPager");
+    const index = workOrder.indexOf(key);
+    if (pager && index !== -1) {
+      const pagerLink = (targetKey, dir) => {
+        if (!targetKey) return `<span class="work-pager__item work-pager__item--${dir}" aria-hidden="true"></span>`;
+        const label = dir === "prev" ? "← 前の制作物" : "次の制作物 →";
+        return `<a class="work-pager__item work-pager__item--${dir}" href="${targetKey}.html" rel="${dir}">
+          <span class="work-pager__label">${label}</span>
+          <span class="work-pager__title">${details[targetKey].title}</span>
+        </a>`;
+      };
+      pager.innerHTML = [
+        pagerLink(workOrder[index - 1], "prev"),
+        `<a class="work-pager__back" href="../index.html#work">制作物一覧へ戻る</a>`,
+        pagerLink(workOrder[index + 1], "next"),
+      ].join("");
+    }
   }
 }
 

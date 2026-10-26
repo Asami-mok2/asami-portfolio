@@ -1702,6 +1702,108 @@ a.process__media:focus-visible {
 }
 
 /* =========================================================
+   Slide summary (works/*.html)
+   ========================================================= */
+.slide-summary {
+  margin-top: 48px;
+}
+.slide-summary__title {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.slide-summary__list > div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: clamp(16px, 3vw, 40px);
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.slide-summary__list > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.slide-summary__list dt {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--fg);
+  line-height: 1.8;
+}
+.slide-summary__list dd {
+  max-width: 62ch;
+  color: var(--fg-muted);
+  line-height: 1.8;
+  font-size: clamp(0.92rem, 1.2vw, 1rem);
+}
+
+/* =========================================================
+   Work pager: prev / next (works/*.html)
+   ========================================================= */
+.work-pager {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: clamp(40px, 6vw, 72px) var(--pad-x);
+  border-top: 1px solid var(--line);
+}
+.work-pager__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.25s ease;
+}
+.work-pager__item--next {
+  align-items: flex-end;
+  text-align: right;
+}
+.work-pager__label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+.work-pager__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.4;
+  color: var(--fg);
+  transition: color 0.25s ease;
+}
+a.work-pager__item--prev:hover,
+a.work-pager__item--prev:focus-visible {
+  transform: translateX(-4px);
+  outline: none;
+}
+a.work-pager__item--next:hover,
+a.work-pager__item--next:focus-visible {
+  transform: translateX(4px);
+  outline: none;
+}
+a.work-pager__item:hover .work-pager__title,
+a.work-pager__item:focus-visible .work-pager__title {
+  color: var(--accent);
+}
+.work-pager__back {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 11px 22px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.work-pager__back:hover,
+.work-pager__back:focus-visible {
+  background-color: var(--accent);
+  color: #fff;
+  outline: none;
+}
+
+/* =========================================================
    Photo / video gallery placeholder (works/robotics.html)
    ========================================================= */
 .media-gallery__title {
@@ -2035,6 +2137,19 @@ a.process__media:focus-visible {
     grid-template-columns: 1fr;
     max-width: 220px;
     margin-inline: auto;
+  }
+  .slide-summary__list > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .work-pager {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+  }
+  .work-pager__back {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
   }
 }
 
