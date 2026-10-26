@@ -167,6 +167,51 @@ a {
   color: #fff;
 }
 
+/* hamburger (≤860px) */
+.menu-toggle {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: none;
+  color: var(--fg);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+.menu-toggle__bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 1.5px;
+  background-color: currentColor;
+  transition: transform 0.3s ease;
+}
+.menu-toggle__bar:first-child {
+  transform: translate(-50%, -4px);
+}
+.menu-toggle__bar:last-child {
+  transform: translate(-50%, 3px);
+}
+.site-header.is-menu-open .menu-toggle__bar:first-child {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+.site-header.is-menu-open .menu-toggle__bar:last-child {
+  transform: translate(-50%, 0) rotate(-45deg);
+}
+.site-header.is-menu-open {
+  background-color: var(--bg);
+  border-bottom-color: var(--line);
+}
+
 /* =========================================================
    Hero
    ========================================================= */
@@ -2039,7 +2084,42 @@ a.work-pager__item:focus-visible .work-pager__title {
   .skills__grid {
     grid-template-columns: 1fr;
   }
+  .menu-toggle {
+    display: block;
+  }
+  .header-cta {
+    margin-left: auto;
+  }
   .topnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px var(--pad-x) 20px;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 30px -24px rgba(51, 41, 43, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+  .site-header.is-menu-open .topnav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .topnav a {
+    padding: 14px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .topnav a:last-child {
+    border-bottom: none;
+  }
+  .topnav a::after {
     display: none;
   }
   .hero__content {

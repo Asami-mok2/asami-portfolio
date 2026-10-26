@@ -162,7 +162,10 @@
       "scroll",
       function () {
         var y = window.scrollY;
-        if (y > lastY && y > 200) {
+        if (header.classList.contains("is-menu-open")) {
+          // keep header visible while the menu is open
+          header.style.transform = "translateY(0)";
+        } else if (y > lastY && y > 200) {
           header.style.transform = "translateY(-120%)";
         } else {
           header.style.transform = "translateY(0)";
@@ -172,6 +175,40 @@
       },
       { passive: true }
     );
+  }
+
+  /* ---------------------------------------------------------
+     Hamburger menu (≤860px)
+     --------------------------------------------------------- */
+  var menuToggle = document.querySelector(".menu-toggle");
+  var topnav = document.querySelector(".topnav");
+  if (header && menuToggle && topnav) {
+    var setMenu = function (open) {
+      header.classList.toggle("is-menu-open", open);
+      menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      menuToggle.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
+    };
+
+    menuToggle.addEventListener("click", function () {
+      setMenu(!header.classList.contains("is-menu-open"));
+    });
+    topnav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setMenu(false);
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && header.classList.contains("is-menu-open")) {
+        setMenu(false);
+        menuToggle.focus();
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (!header.contains(e.target)) setMenu(false);
+    });
+    window.matchMedia("(min-width: 861px)").addEventListener("change", function (e) {
+      if (e.matches) setMenu(false);
+    });
   }
 
 })();
